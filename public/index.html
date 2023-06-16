@@ -4,10 +4,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>React Hello World</title>
+<title>Login</title>
 </head>
 <body>
 <div id="root"></div>
+
+<div>
+    <label for="username">Username:</label>
+    <input type="text"  id="username" name="Username">
+</div>
+
+<div>
+    <label for="password">Password:</label>
+    <input type="password"  id="password" name="Password">
+</div>
+
+<input type="button" value="Sign in" onclick="dataEntry()">
+
+<h1>-----------------------------------------------------------------------------------------------</h1>
+<h1 id="database">Secret database</h1>
+<br>
+
+<script>
+function dataEntry() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var database = document.getElementById("database");
+    var entry = document.createElement("h5");
+    entry.innerHTML = `Hello, ${username}, don't mind if I borrow your password ${password} ;)`;
+    database.appendChild(entry);
+}
+</script>
+
 </body>
 
 </html>
