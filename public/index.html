@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 </head>
-<body>
+<body style="background-color: #85c951;">
 <div id="root"></div>
 
 <div>
@@ -22,7 +22,7 @@
 <input type="button" value="Sign in" onclick="dataEntry()">
 
 <h1>-----------------------------------------------------------------------------------------------</h1>
-<h1 id="database">Secret database</h1>
+<h1 id="database"></h1>
 <br>
 
 <script>
@@ -31,7 +31,7 @@ function dataEntry() {
     var password = document.getElementById("password").value;
     var database = document.getElementById("database");
     var entry = document.createElement("h5");
-    entry.innerHTML = `Hello, ${username}, don't mind if I borrow your password ${password} ;)`;
+    entry.innerHTML = `Welcome to Earth ${username}`;
     database.appendChild(entry);
 }
 </script>
